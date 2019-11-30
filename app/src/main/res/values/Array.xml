@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones">
+        <item></item>
+        <item>Electrodomesticos</item>
+        <item>Muebles</item>
+        <item>Frutas</item>
+        <item>Verduras</item>
+        <item>Mercado</item>
+        <item>Aseo</item>
+        <item>Moda</item>
+        <item>Deporte</item>
+        <item>Licores</item>
+        <item>Confiteria</item>
+    </string-array>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformeFecha"
+    tools:layout_editor_absoluteY="81dp">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graficaBarras"
+        android:layout_width="match_parent"
+        android:layout_height="339dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edtFechaIni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Fecha Inicial yyyy-mm-dd"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtFechaFinal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graficaBarras" />
+
+    <EditText
+        android:id="@+id/edtFechaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Fecha final yyyy-mm-dd"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFechaIni" />
+
+    <Button
+        android:id="@+id/btnGenerar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="mostrarFecha"
+        android:text="Generar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtFechaFinal" />
+
+</android.support.constraint.ConstraintLayout>

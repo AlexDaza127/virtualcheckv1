@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CRUDVentas">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Digite los Datos de la Venta"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="339dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imbInsertar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="insertarVenta"
+                android:src="@android:drawable/ic_menu_add"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbConsultar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="consultarVenta"
+                android:src="@android:drawable/ic_menu_search"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="modificarVenta"
+                android:src="@android:drawable/ic_menu_edit"
+                app:layout_constraintStart_toEndOf="@+id/imbConsultar"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbEliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="eliminarVenta"
+                android:src="@android:drawable/ic_menu_delete"
+                tools:layout_editor_absoluteX="184dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbAtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="atras"
+                android:src="@android:drawable/ic_media_previous"
+                tools:layout_editor_absoluteX="296dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="borrarCampos"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                tools:layout_editor_absoluteX="240dp"
+                tools:layout_editor_absoluteY="435dp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="346dp"
+        android:layout_height="356dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtCodVenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Codigo de Venta"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edtCodVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Codigo Vendedor"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edtSucursal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Sucursal"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fecha yyyy-dd-mm"
+                android:inputType="textPersonName|time"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="264dp" />
+
+            <EditText
+                android:id="@+id/edtIdCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Identificacion del Cliente"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnBuscarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="buscarCliente"
+                android:text="Buscar Cliente"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.DropDownItem" />
+
+            <EditText
+                android:id="@+id/edtNomCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Nombre del Cliente"
+                android:inputType="textImeMultiLine|textPersonName" />
+
+            <EditText
+                android:id="@+id/edtApeCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Apellido del Cliente"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtCodBarras"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:ems="10"
+                android:hint="Codigo de Barras"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="329dp" />
+
+            <ImageButton
+                android:id="@+id/imbCamBusProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="escanear"
+                app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            <Button
+                android:id="@+id/btnBuscarProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buscar Producto"
+                android:onClick="buscarProducto"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/edtNomProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Nombre del Producto"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtPrecioProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Precio del Producto C/U"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtCantDisp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Cantidad Disponible"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtCantProd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Digite la cantidad"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnCalcularTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Calcular Total"
+                android:onClick="calcularTotal"
+                android:textAllCaps="false" />
+
+            <EditText
+                android:id="@+id/edtTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Total Venta"
+                android:inputType="number|numberDecimal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

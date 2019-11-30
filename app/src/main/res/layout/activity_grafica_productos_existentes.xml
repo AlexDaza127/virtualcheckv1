@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GraficaProductosExistentes">
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/graficaBarras"
+        android:layout_width="match_parent"
+        android:layout_height="337dp"
+        android:layout_marginBottom="250dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <Button
+        android:id="@+id/btnGenerarReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="generarReporte"
+        android:text="Generar Reporte"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtMarca" />
+
+    <EditText
+        android:id="@+id/edtIdMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite del 1 al 10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtMarca"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graficaBarras" />
+
+    <EditText
+        android:id="@+id/edtMarca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tipo Producto"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerarReporte"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtIdMarca" />
+
+</android.support.constraint.ConstraintLayout>

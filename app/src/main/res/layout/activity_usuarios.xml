@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Usuarios">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:text="BIENVENIDO!"
+            android:textSize="24sp"
+            android:textStyle="italic"
+            app:fontFamily="@font/aclonica"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/txtNombreUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTipoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:fontFamily="@font/aclonica"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/imbUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="gestionUsuarios"
+                    app:srcCompat="@mipmap/usuarios"
+                    tools:layout_editor_absoluteX="147dp"
+                    tools:layout_editor_absoluteY="316dp" />
+
+                <TextView
+                    android:id="@+id/txtUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Gestión Usuarios"
+                    app:fontFamily="casual" />
+
+                <ImageButton
+                    android:id="@+id/imbProducto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="gestionProdcutos"
+                    android:visibility="visible"
+                    app:srcCompat="@mipmap/productos"
+                    tools:layout_editor_absoluteX="147dp"
+                    tools:layout_editor_absoluteY="163dp" />
+
+                <TextView
+                    android:id="@+id/txtProducto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Gestion Productos"
+                    app:fontFamily="casual" />
+
+                <ImageButton
+                    android:id="@+id/imbClientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="gestionCliente"
+                    app:srcCompat="@mipmap/clientes" />
+
+                <TextView
+                    android:id="@+id/txtClientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Gestion Clientes"
+                    app:fontFamily="casual" />
+
+                <ImageButton
+                    android:id="@+id/imbVentas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="gestionVenta"
+                    app:srcCompat="@mipmap/ventas" />
+
+                <TextView
+                    android:id="@+id/txtVentas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Gestion Ventas"
+                    app:fontFamily="casual" />
+
+                <ImageButton
+                    android:id="@+id/imbReportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="gestionReportes"
+                    app:srcCompat="@mipmap/reportes" />
+
+                <TextView
+                    android:id="@+id/txtReportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Gestion Reportes"
+                    app:fontFamily="casual" />
+
+                <ImageButton
+                    android:id="@+id/imbCerrarSesion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="cerrarSesion"
+                    app:srcCompat="@mipmap/cerrarsesion" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:text="Cerrar Sesión"
+                    app:fontFamily="casual" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

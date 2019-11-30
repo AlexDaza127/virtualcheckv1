@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reportes">
+
+    <LinearLayout
+        android:layout_width="206dp"
+        android:layout_height="480dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginLeft="89dp"
+        android:layout_marginRight="89dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="31dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="30dp"
+            android:text="Informes"
+            android:textAllCaps="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="133dp"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <Button
+            android:id="@+id/btnProdExist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="gestionProductosExistentes"
+            android:text="Productos disponibles"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+        <Button
+            android:id="@+id/btnFechas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="gestionFechas"
+            android:text="Reporte de Fechas" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

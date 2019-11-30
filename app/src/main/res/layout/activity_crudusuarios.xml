@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CRUDUsuarios">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="309dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imbCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="insertarUsuario"
+                android:src="@android:drawable/ic_menu_add"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbEliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="eliminarUsuario"
+                android:src="@android:drawable/ic_menu_delete"
+                tools:layout_editor_absoluteX="184dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbModificar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="modificarUsuario"
+                android:src="@android:drawable/ic_menu_edit"
+                app:layout_constraintStart_toEndOf="@+id/imbConsultar"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbConsultar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="consultarUsuario"
+                android:src="@android:drawable/ic_menu_search"
+                tools:layout_editor_absoluteX="72dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbAtras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="atras"
+                android:src="@android:drawable/ic_media_previous"
+                tools:layout_editor_absoluteX="296dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="cancelar"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                tools:layout_editor_absoluteX="240dp"
+                tools:layout_editor_absoluteY="435dp" />
+
+            <ImageButton
+                android:id="@+id/imbRecuperPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="enviarEmail"
+                android:src="@android:drawable/ic_dialog_email" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="362dp"
+        android:layout_height="403dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center_vertical|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Tipo de Usuario"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="143dp"
+                tools:layout_editor_absoluteY="27dp" />
+
+            <RadioGroup
+                android:id="@+id/rdgTipoUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:checkedButton="@+id/rdbEmpl"
+                android:clickable="true"
+                tools:layout_editor_absoluteX="131dp"
+                tools:layout_editor_absoluteY="46dp">
+
+                <RadioButton
+                    android:id="@+id/rdbAdmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Admnistrativo"
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/rdbEmpl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Empleado"
+                    android:textStyle="italic" />
+
+                <RadioButton
+                    android:id="@+id/rdbVend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vendedor" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Identificacion"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edtNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/edtTel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Telefono"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress|textPersonName" />
+
+            <EditText
+                android:id="@+id/edtSalario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Salario"
+                android:inputType="number|numberDecimal" />
+
+            <EditText
+                android:id="@+id/edtPassReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Contraseñia"
+                android:inputType="textPersonName|textPassword"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="225dp" />
+
+            <EditText
+                android:id="@+id/edtClave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Palabra Clave"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="83dp"
+                tools:layout_editor_absoluteY="380dp" />
+
+            <Button
+                android:id="@+id/btnGenVend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="gestionVendedor"
+                android:text="Generar Codigo Vendedor"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
